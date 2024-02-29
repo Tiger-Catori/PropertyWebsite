@@ -1,0 +1,88 @@
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.8); /* Example: semi-transparent black; adjust as needed */
+}
+
+
+.navbar-nav {
+    column-gap: 2.4rem;
+}
+
+.nav-item {
+    color: var(--clr-body2);
+    /* padding-bottom: 0rem; */
+}
+.nav-link {
+    color: var(--clr-body2);
+}
+.nav-link:hover {
+    color: #FF7377;
+}
+
+.logo img {
+    max-height: 70px;
+    /* min-height: 50px; */
+    height: auto;
+    width: 100%
+}
+
+/* SECTION HERO */
+.section__hero {
+    background-image: url('../images/pages/home/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70vh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+.section__hero::before {
+    content: ""; /* Necessary for the pseudo-element to be generated */
+    position: absolute; /* Position relative to its parent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1); /* Black with desired opacity; adjust as needed */
+    z-index: 1; /* Ensure it's above the background image */
+}
+
+/* Ensure content is layered above the pseudo-element */
+.section__hero > * {
+    position: relative; /* Make it stack above the ::before pseudo-element */
+    z-index: 2;
+}
+
+/*Hero text*/
+
+.hero__text { 
+    /* max-width: 150rem; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: var(--clr-body2);
+    text-align: center;
+}
+
+.heading__hero {
+    padding-bottom: 2.8rem;
+    margin-top: 10%;
+}
+
+.heading__hero h1 {
+    font-size: 8rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+}
+
+.hero__p {
+    width: 70%;
+    font-size: var(--fs-h2);
+    padding-bottom: 2.8rem;
+
+}

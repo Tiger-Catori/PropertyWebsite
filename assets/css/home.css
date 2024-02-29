@@ -1,0 +1,47 @@
+/* BENEFITS SECTION */
+.card__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+/* Target the .card__benefits directly for odd and even children */
+.card__container .card__benefits:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.card__container .card__benefits:nth-child(even) {
+    align-self: flex-end;
+}
+
+
+.card__benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.6rem;
+    padding: 2rem 2rem;
+    box-shadow: var(--bs-2);
+    border-radius: 6px;
+}
+
+/* Card sizing and internals*/
+.card__benefits {
+    max-width: 288px;
+    width: 100%;
+    height: auto; /* Keeps aspect ratio */
+}
+
+.card__benefits img {
+    max-width: 38px;
+    width: 100%;
+    height: auto; /* Keeps aspect ratio */
+}
+
+.card__benefits h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
