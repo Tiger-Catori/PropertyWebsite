@@ -1,7 +1,7 @@
 .button__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 2.4rem;
 }
 
@@ -14,13 +14,15 @@
     /* font-size: var(--fs-btn); */
     font-size: var(--fs-h3);
     cursor: pointer; /* Gives a pointer cursor on hover */
-    filter: brightness(0.95);
+    filter: brightness(0.93);
     letter-spacing: 0.05em;
+    transform: scale(0.85);
 }
 
 .button:hover {
-    filter: brightness(1.03)
-  }
+    filter: brightness(1.0)
+
+}
 
 .red-button {
     background-color: var(--clr-accent);
@@ -28,4 +30,25 @@
 
 .blue-button {
     background-color: var(--clr-accent2);
+}
+.footer-button {
+    /* background-color: #080707; */
+    background-color: inherit;
+    border: 1px solid var(--clr-body2);
+    justify-content: center;
+    padding: 1rem 1.6rem;
+    font-size: 1.2rem;
+    transform: scale(0.85);
+    margin-left:-6px;
+    cursor: pointer;
+}
+
+
+
+/* .footer-button::before {
+    transform: scale(0.98);
+} */
+
+.red-button:hover, .blue-button:hover, .footer-button:hover {
+    transform: scale(0.88);
 }

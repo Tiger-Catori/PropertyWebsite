@@ -3,12 +3,15 @@
     position: sticky;
     top: 0;
     z-index: 1000; 
-    background-color: rgba(0, 0, 0, 0.8); /* Example: semi-transparent black; adjust as needed */
+    background-color: rgba(0, 0, 0, 1); /* Example: semi-transparent black; adjust as needed */
+    /* background-color: #080707; */
+    opacity: 0.8;
 }
 
 
 .navbar-nav {
     column-gap: 2.4rem;
+    row-gap: 1rem;
 }
 
 .nav-item {
@@ -36,7 +39,7 @@
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
     position: relative; /* Establish a positioning context */
-    height: 70vh; /* Set the height of the hero section to 70% of the viewport height */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
     
 }
 
