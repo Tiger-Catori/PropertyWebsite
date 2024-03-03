@@ -24,7 +24,8 @@ ul {
 
 .footer {
     background-color: #070808;
-    padding: 70px 0;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
 }
 
 .logo-footer img {
@@ -140,6 +141,8 @@ ul {
     flex-basis: 25%;
     color: #fff;
     flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+    padding-top: 3.2rem;
 }
 
 .footer__bottom a {
