@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
 *,
 *::before,
 *::after {
@@ -77,7 +77,7 @@ html {
   .heading {
     font-weight: var(--fw-bold);
     font-size: var(--fs-h1);
-    margin-bottom: 4.8rem;
+    margin-bottom: 2.4rem;
     text-transform: uppercase;
     
   }
@@ -111,3 +111,22 @@ html {
     margin: 0 auto;
   }
 
+  .grid {
+    display: grid;
+    column-gap: 3.2rem;
+    row-gap: 4.8rem;
+  }
+
+.grid--2-cols {
+    grid-template-columns: auto 1fr; /* Auto for the image, remaining space for the text */
+    column-gap: 1.4rem;
+}
+
+.grid--2cols {
+  grid-template-columns: repeat(2, 1fr); /* 50:50 */
+  column-gap: 8.4rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
