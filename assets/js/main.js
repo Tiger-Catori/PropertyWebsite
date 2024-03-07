@@ -25,15 +25,19 @@ class Carousel {
             el.classList.remove('gallery__item-3')
             el.classList.remove('gallery__item-4')
             el.classList.remove('gallery__item-5')
+            el.classList.remove('gallery__item-6')
+            el.classList.remove('gallery__item-7')
+            el.classList.remove('gallery__item-8')
+
         })
 
-        this.carouselArray.slice(0,5).forEach((el,i) => {
+        this.carouselArray.slice(0,8).forEach((el,i) => {
             el.classList.add(`gallery__item-${i+1}`);
         })
     }
 
     setCurrentState(direction) {
-        if (direction.classNAme == 'gallery-controls-previous') {
+        if (direction.className == 'gallery-controls-previous') {
             this.carouselArray.unshift(this.carouselArray.pop());
 
         }   else {
@@ -59,6 +63,8 @@ class Carousel {
         })
     }
 }
+
+
 
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 

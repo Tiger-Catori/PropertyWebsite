@@ -49,6 +49,27 @@
 }
 
 
+/* SCROLLBAR */
+html::-webkit-scrollbar
+ {
+  width: 1.2rem; /* width of the entire scrollbar */
+  height: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+  /* background: #111; */
+  padding-left: 0.1rem; /* color of the tracking area */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent2); /* color of the scroll thumb */
+  border-radius: 100px; /* roundness of the scroll thumb */
+  /* border-left: 3px solid #111;
+  border-right: 1px solid #111; */
+  padding-left: 0.1rem; /* creates padding around scroll thumb */
+}
+
 /* General Styles */
 
 html {
@@ -57,6 +78,7 @@ html {
       /* 10px / 16px = 0.625 = 62.5% */
       /* Percentage of users browsers font size setting */
       font-size: 62.5%;
+      overflow-x: hidden; /* Add this line */
   }
 
   body {
