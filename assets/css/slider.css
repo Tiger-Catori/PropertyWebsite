@@ -104,10 +104,14 @@
   .slider-scrollbar:hover .scrollbar-track {
     height: 0.4rem;
   }
+
+  /* .slider-scrollbar:hover .scrollbar-track {
+    height: 0.4rem;
+  } */
   
   .slider-scrollbar .scrollbar-thumb {
     position: absolute;
-    background: #000;
+    background: var(--clr-accent);
     top: 0;
     bottom: 0;
     width: 10%;

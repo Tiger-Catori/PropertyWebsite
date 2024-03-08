@@ -304,6 +304,128 @@
 }
 
 
+/* FAQ SECTION ACCORDIAN */
+.section__faq {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #E3F2FD; */
+}
+
+.faq__container {
+    display: flex;
+    flex-direction: row; /* Maintained */
+    justify-content: center;
+    gap: 9.6rem; /* Adjusted as needed */
+    align-items: flex-start; /* This aligns children elements to the top */
+}
+
+.faq__container > * {
+    flex-basis: 50%; /* Take up half the container by default */
+}
+
+/* #faq-content {
+    justify-content: center;
+} */
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 100%;
+    background: #FFF;
+    margin: 0 1.4rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--clr-body2) !important;
+    /* gap: 2rem; */
+    /* box-shadow:  0 0 4px rgba(0,0,0,0.2); */
+}
+
+.accordion {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.accordion .accordion-content{
+    margin: 2rem 0;
+    border-radius: 4px;
+    background: var(--clr-accent);
+    /* border: 1px solid var(--clr-accent); */
+    overflow: hidden;
+    padding-bottom: 0 !important;
+}
+.accordion-content:nth-child(1){
+    margin-top: 0;
+}
+.accordion-content:nth-child(2){
+    background-color: var(--clr-accent2);
+}
+.accordion-content:nth-child(3){
+    background-color: var(--clr-accent);
+}
+.accordion-content:nth-child(4){
+    background-color: var(--clr-accent2);
+}
+.accordion-content.open{
+    padding-bottom: 1rem;
+}
+.accordion-content .acc-header {
+    display: flex;
+    min-height: 4rem;
+    padding: 0 1.5rem;
+    padding-top: 0.8rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s linear;
+}
+/* .accordion-content.open .acc-header {
+    min-height: 35px;
+} */
+.accordion-content .acc-header .title{
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    /* color: #333; */
+}
+.accordion-content .acc-header i {
+    font-size: 1.8rem;
+    /* color: #333; */
+}
+
+.accordion .accordion-content .description {
+    /* Existing styles */
+    height: 0;
+    overflow: hidden; /* This prevents any content from spilling out */
+    transition: all 0.2s linear;
+    padding: 0 1.5rem; /* This might be causing the issue */
+    /* Adjust padding for closed state */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.accordion-content.open .description {
+    /* Dynamically adjust height or use max-height for a transition effect */
+    height: auto; /* Example max-height, adjust based on content */
+    /* padding: 1rem 1.5rem;  Adjust padding for open state */
+    /* padding-top: 1rem; */
+    font-size: 1.68rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) { /* Adjust this value based on your needs */
+    .faq__container {
+        flex-wrap: wrap;
+        gap: 2rem; /* Optionally adjust the gap for smaller screens */
+    }
+
+    .faq__container > * {
+        flex-basis: 100%; /* Allow each child to take up the full container width */
+    }
+}
+
+
 @media (max-width: 1200px) {
     .card__container {
         width: auto; /* Allow the cards to adjust based on available space */
