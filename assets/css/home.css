@@ -441,6 +441,88 @@
     /* border-radius: 16px; */
 }
 
+/* Updated LANDLORD SECTION CSS */
+.section__landlord {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Ensure this container is also centered */
+    /* width: 100%;  Full width to ensure alignment */
+}
+
+.landlord__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center-align the items */
+    gap: 4.8rem;
+    /* width: 100%;  */
+    /* Control width to manage inner content alignment */
+}
+
+.landlord__container > * {
+    padding: 3.2rem 2.4rem;
+}
+
+.landlord__card {
+    display: flex;
+    flex-direction: row; /* Change to column for vertical alignment if necessary */
+    align-items: center; /* Align items center for horizontal alignment */
+    justify-content: center; /* Center content vertically if flex-direction is column */
+    column-gap: 4.8rem;
+    row-gap: 2rem;
+    /* text-align: center; Center-align the text */
+    /* width: 100%; */
+     /* Adjust width as necessary */
+}
+
+
+.landlord__card .button {
+    margin-bottom: 2.4rem;
+}
+
+.landlord__card2 {
+    display: flex;
+    flex-direction: row;
+    gap: 6.4rem;
+    justify-content: space-between;
+    background-color: #093394;
+    /* width: 105vw; */
+    color: #fff;
+    /* flex-basis: 50%; */
+    /* flex-wrap: wrap; */
+}
+
+.landlord__card2 .button {
+    margin-left: -6px;
+}
+
+.landlord__subcard {
+    margin-top: auto; /* Pushes the subcard to the bottom */
+    width: 100%; 
+}
+
+.landlord__image img {
+    width: 100%;
+    max-width: 446px;
+    height: auto;
+}
+
+.landlord__card3 {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical alignment if necessary */
+    align-items: center; /* Align items center for horizontal alignment */
+    justify-content: center; /* Center content vertically if flex-direction is column */
+    column-gap: 6.4rem;
+    row-gap: 2rem;
+    text-align: center; 
+    margin-top: 2rem;
+    /* width: 100%; */
+     /* Adjust width as necessary */
+}
+
+
+
 /* Media query for smaller screens */
 @media (max-width: 1000px) { /* Adjust this value based on your needs */
     .faq__container {
