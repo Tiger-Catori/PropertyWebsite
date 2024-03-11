@@ -111,8 +111,8 @@
   
   .slider-scrollbar .scrollbar-thumb {
     position: absolute;
-    background: var(--clr-accent2);
-    background: #111;
+    background: var(--clr-accent);
+    /* background: #111; */
     top: 0;
     bottom: 0;
     width: 10%;
