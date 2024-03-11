@@ -1,9 +1,14 @@
 /* Sticky Navbar */
+.header {
+    width:105vw;
+    max-width: 105vw;
+}
+
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000; 
-    background-color: rgba(0, 0, 0, 1); /* Example: semi-transparent black; adjust as needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Example: semi-transparent black; adjust as needed */
     /* background-color: #080707; */
     opacity: 0.9;
 }

@@ -52,7 +52,7 @@
 /* SCROLLBAR */
 html::-webkit-scrollbar
  {
-  width: 1.2rem; /* width of the entire scrollbar */
+  width: 0.8rem; /* width of the entire scrollbar */
   height: 1rem;
 }
 
@@ -64,7 +64,9 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--clr-accent2); /* color of the scroll thumb */
+  /*background-color: #111;  color of the scroll thumb */
   border-radius: 100px; /* roundness of the scroll thumb */
+  border-radius: none; /* roundness of the scroll thumb */
   /* border-left: 3px solid #111;
   border-right: 1px solid #111; */
   padding-left: 0.1rem; /* creates padding around scroll thumb */
