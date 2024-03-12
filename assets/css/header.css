@@ -21,6 +21,10 @@
     row-gap: 1rem;
 }
 
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
 .nav-item {
     color: var(--clr-body2);
     /* padding-bottom: 0rem; */
@@ -95,4 +99,12 @@
     font-size: var(--fs-h2);
     padding-bottom: 2.8rem;
 
+}
+
+
+@media (max-width: 1200px) { 
+    
+    .heading__hero h1 {
+        font-size: 5rem;
+    }
 }
