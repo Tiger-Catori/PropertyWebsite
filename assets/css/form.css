@@ -1,0 +1,123 @@
+.form__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6.4rem;
+    row-gap: 4.8rem;
+}
+.form__container > * {
+    flex-basis: 50%;
+}
+
+.form__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 3.2rem 2.4rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
+
+}
+
+.input__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.input {
+    padding: 1.2rem 1.6rem;
+    border: none; 
+    border-radius: 2px;
+    width: 100%;
+    /* margin-top: 1.2rem; */
+    background-color: #fff;
+    font-size: var(--fs-btn);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.web__form h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.web__form p {
+    margin-bottom: 1.6rem;
+}
+
+
+/* Checkbox  */
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* This ensures vertical alignment is centered */
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+
+.label {
+    display: flex;
+    align-items: end;
+    font-size: var(--fs-btn);
+    margin-left: 3%;
+}
+
+/* Button */
+
+.btn__form {
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em 2em;
+    gap: 10px;
+    /* border-radius: 100px; */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    filter: brightness(0.95);
+    /* border: 2px solid #fff; */
+    margin-top: 1.3em;
+}
+
+.btn__form {
+     /* width: calc(100% - 3.2rem); Adjust the width to account for parent padding */
+    margin-top: 1.6rem; /* Adjust the margin to align with input fields */
+    width: 100%;
+}
+
+.btn__form {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: var(--clr-body2);
+    font-weight: var(--fw-bold);
+    /* font-size: var(--fs-btn); */
+    font-size: var(--fs-btn);
+    cursor: pointer; /* Gives a pointer cursor on hover */
+    filter: brightness(0.93);
+    letter-spacing: 0.05em;
+    transform: scale(1);
+    border-radius: 4px;
+}
+
+.btn__form:hover {
+    transform: scale(1);
+}
+
+/* Additional adjustments for responsiveness and layout */
+@media (max-width: 1200px) {
+    .form__container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

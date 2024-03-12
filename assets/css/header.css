@@ -1,7 +1,8 @@
 /* Sticky Navbar */
 .header {
     width:105vw;
-    max-width: 105vw;
+    max-width: 100vw;
+    overflow-x: hidden; 
 }
 
 .navbar {

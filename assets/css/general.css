@@ -91,6 +91,7 @@ html {
     font-family: var(--ff-primary); /*Montserrat*/ 
     font-size: var(--fs-body);
     line-height: 1.6;
+    overflow-x: none; 
     /* max-width: 130rem; */
   }
 
@@ -154,4 +155,16 @@ html {
 
 .grid--center-v {
   align-items: center;
+}
+
+
+/* Adjust font sizes for screens up to 1000px wide */
+@media (max-width: 1000px) {
+  :root {
+      --fs-h1: 2.7rem; /* smaller than 3.6rem */
+      --fs-h2: 2rem; /* smaller than 2.4rem */
+      --fs-h3: 1.65rem; /* smaller than 2rem */
+      --fs-body: 1.4rem; /* smaller than 1.75rem */
+      --fs-btn: 1.2rem; /* smaller than 1.5rem */
+  }
 }

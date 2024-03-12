@@ -42,13 +42,6 @@
     /* gap: 2.0rem; */
 }
 
-/* .testimonial__img img {
-    max-width: 230px;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-} */
-
 .testimonial__text h3 {
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
