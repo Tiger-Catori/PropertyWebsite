@@ -118,7 +118,7 @@
     .testimonial__card {
         flex-direction: column; /* Stacks image and text vertically */
         gap: 2rem;
-        /* align-items: center; */
+        text-align: center;
     }
     .test__container {
         width: auto; /* Adjusts width for smaller screens */

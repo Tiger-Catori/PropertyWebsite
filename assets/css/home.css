@@ -202,7 +202,7 @@
 .feature__container {
     width: 130rem;
     column-gap: 20%;
-
+    justify-content: center;
     /* justify-content: center;
     margin-left: 40%; */
     transform: translateX(-7%);
@@ -298,6 +298,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 4.8rem;
     margin-top: 4.8rem;
 }
@@ -441,6 +442,10 @@
 }
 
 /* VIDEO */
+.section__video {
+    /* display: none; */
+}
+
 .video__container {
     display: flex;
     justify-content: center;
@@ -456,6 +461,10 @@
     height: 73.125rem; 
     /* border-radius: 16px; */
 }
+
+/* .section__video {
+    display: none;
+} */
 
 /* Updated LANDLORD SECTION CSS */
 .section__landlord {
