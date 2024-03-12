@@ -105,9 +105,14 @@
   border: none;
   padding: 12px 30px;
   border-radius: 4px;
-  background-color: #4070f4;
+  /* background-color: #4070f4; */
   background-color: var(--clr-accent2);
   cursor: pointer;
+  filter: brightness(0.97);
+}
+
+.section__subscribe .input-box .button__sub:hover {
+  filter: brightness(1.05);
 }
 
 .section__subscribe .input-box .button__sub:active {
