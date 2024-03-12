@@ -20,14 +20,17 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/slider.css">
     <link rel="stylesheet" href="assets/css/testimonial.css">
+    <link rel="stylesheet" href="assets/css/form.css">
 </head>
 <body>
     <header class="header">
         <!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container-xxl">
                 <div class="logo navbar-brand">
-                    <img src="assets/images/logo/logo.png" alt="Help4PropertyDeals Logo">
+                    <a href="home.html">
+                        <img src="assets/images/logo/logo.png" alt="Help4PropertyDeals Logo">
+                    </a>
                 </div>
                 <!-- Toggle button form Mobile nav -->
                 <button 
@@ -610,6 +613,46 @@
         <!--
             FORMS SECTION
         -->
+        <section class="section section__form">
+            <div class="form__container">
+
+                <div class="form__section">
+                    <form action="" class="web__form">
+                        <div class="heading__container">
+                            <h1 class="heading">
+                                Need extra information? 
+                            </h1>
+                            <p>
+                                Send us your details and we will contact you soon.
+                            </p>
+                        </div>
+
+                        <div class="input__box">
+                            <input type="text" class="input" name="name" placeholder="Name">
+                            <input type="tel" class="input" name="phone" placeholder="Telephone">
+                            <input type="email" class="input" name="email" placeholder="Email">
+                        </div>
+                        
+                       
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            <label for="subscribe" class="label">I agree to have my information stored Privacy Policy.</label>
+                        </div>
+
+                        <button class="button blue-button btn__form">
+                            <div class="button-content">
+                              <span class="text">Send</span>
+                            </div>
+                        </button>
+
+                    </form>
+                </div>
+
+                <div class="landlord__image">
+                    <img src="assets/images/pages/home/image-7.png" alt="">
+                </div>
+            </div>
+        </section>
 
         
     </div>
