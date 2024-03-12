@@ -1,0 +1,160 @@
+
+/* SUBSCRIBE SECTION */
+.section__subscribe {
+    margin-bottom: 20rem;
+}
+
+
+.section__subscribe .subscribe__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Allows absolute positioning within */
+  }
+
+ 
+.section__subscribe .subscribe__card .heading {
+    font-size: var(--fs-h2);
+    margin-bottom: 0;
+    /* font-size: var(--fs-h2); */
+  }
+  
+  /* Adjusted for overlapping */
+  
+.section__subscribe .subscribe__card {
+    display: flex;
+    flex-direction: row; /* Aligns children side by side */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Distributes space between children */
+    padding: 4.8rem;
+    max-width: 110rem; /* Adjust based on your preference */
+    width: 90%; 
+    position: absolute;
+    bottom: -40%; /* Adjust this value to control overlap */
+    margin: 0 4.8rem;
+    z-index: 10; /* Ensures it's above the image */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);/* Ensures it takes full width of its parent */
+  }
+
+ 
+.section__subscribe .input-box {
+  display: flex;
+  position: relative;
+  height: 76px;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+  
+  /* Adjusts the heading container to ensure the text fits in one line */
+ 
+.section__subscribe .heading__container {
+    flex-basis: 40%; /* Allocates 30% of the space to the heading */
+    white-space: nowrap; /* Ensures text doesn't wrap */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows (optional) */
+
+  }
+  
+  /* Adjusts the input box to use the remaining space */
+ 
+.section__subscribe .input-box {
+    flex-basis: 60%; /* Allocates the remaining 70% of the space to the input box */
+    display: flex;
+    flex-direction: row;
+    /* Other styles remain unchanged */
+  }
+
+.section__subscribe .input-box .button__sub {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* .input-box i {
+  left: 20px;
+  font-size: 30px;
+  color: #707070;
+} */
+
+.section__subscribe .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  /* font-size: 18px; */
+  font-weight: 400;
+  border: none;
+  padding: 2.4rem 4rem;
+  background-color: transparent;
+}
+
+
+.section__subscribe .input-box .button__sub {
+  text-transform: uppercase;
+  right: 20px;
+  /* font-size: var(--fs-body); */
+  font-weight: 400;
+  color: #fff;
+  /* color: #111; */
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #4070f4;
+  background-color: var(--clr-accent2);
+  cursor: pointer;
+}
+
+.section__subscribe .input-box .button__sub:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+  .input-box {
+    height: 6.6rem;
+    margin: 0 0.8rem;
+  }
+
+  .input-box input {
+    padding: 0 11.2rem 0 5rem;
+  }
+  .input-box .button__sub {
+    right: 12px;
+    padding: 0.8rem  1.8rem;
+  }
+
+  .section__subscribe .subscribe__card {
+    /* Stack items vertically */
+    justify-content: center;
+    padding: 2.4rem; /* Adjust padding as needed */
+    align-items: center; /* Center align items for better visual appearance */
+    row-gap: 1.6rem; /* Add some space between the stacked items */
+    flex-wrap: wrap;
+  }
+
+  .section__subscribe .subscribe__card .heading {
+    font-size: var(--fs-h3);
+  }
+
+  .heading__container {
+    /* Allow the text to wrap if necessary */
+    flex-basis: auto; /* Remove the fixed basis */
+    white-space: normal; /* Allow wrapping */
+    overflow: visible; /* Show overflow */
+    text-align: center; /* Center-align the text for aesthetics */
+    width: 100%;
+  }
+
+  .input-box {
+    flex-basis: auto; /* Allow the input box to adjust as needed */
+    width: 100%; /* Use full available width */
+    max-width: none; /* Remove max-width restriction */
+  }
+  
+}
