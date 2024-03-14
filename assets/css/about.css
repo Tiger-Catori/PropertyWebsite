@@ -1,0 +1,67 @@
+/* SECTION HERO */
+.section__hero {
+    background-image: url('../images/pages/about/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+/* SECTION HISTORY */
+.history__container {
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    /* column-gap: 6.4rem; */
+    row-gap: -2.4rem;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Add this to establish a stacking context */
+    /* flex-wrap: wrap */
+}
+
+.history__container > * {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.history__container .container__image {
+    position: relative; /* Enable z-index manipulation */
+    z-index: 2; /* Ensure it's above the text */
+    align-self: flex-end; /* Align to the edge of the flex container */
+}
+
+.history__container .container__image img {
+    max-width: 578px;
+    width: 100%;
+    height: auto;
+    /*transform: translateX(15%);  Adjust this value to control the overlap */
+    transform: translateY(-2rem);
+    /* transform: translateY(-3%); */
+}
+
+.history__text {
+    color: #fff;
+    background-color: var(--clr-accent);
+    padding: 6% 8%; /* Increased padding for visual enlargement, adjust percentages as needed */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* Lower than the image to allow overlap */
+    /* Optional: Adjust as necessary to overlap the image */
+    /* margin-right: -5%;  */
+}
+
+/* Optional: Increase the size of .history__text by adjusting its scale */
+.history__text {
+    transform: scale(1.1); /* Increase by 10%, adjust as needed */
+    /* Adjust the origin of transformation if needed */
+}
+
+
+

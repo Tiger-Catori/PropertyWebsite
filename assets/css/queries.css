@@ -1,0 +1,33 @@
+/* Media query for screen sizes up to 1300px */
+@media (max-width: 1300px) {
+    .history__container {
+        flex-direction: column;
+        align-items: center; /* Center the items for a column layout */
+        justify-content: center; /* Center the text within its container, if needed */
+    }
+
+    .history__container > * {
+        flex-basis: auto; /* Adjust flex-basis for a column layout */
+    }
+
+    .history__container .container__image {
+        align-self: center; /* Center the image in the container */
+    }
+
+    .history__container .container__image img {
+        /* Adjust image transformation for a column layout */
+        transform: translateY(0); /* Reset Y translation as it may not be needed in column layout */
+        margin-top:-50%;
+    }
+
+    .history__text {
+        /* Adjust text container styling for a column layout */
+        margin-bottom: -10%; /* Add some space above the text container when stacked */
+        margin-top: -4rem;
+    }
+
+    .history__text::after {
+        content: '';
+        height: 40vh;
+    }
+}
