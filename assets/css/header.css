@@ -60,61 +60,64 @@
 
 
 /* SECTION HERO */
+/* SECTION HERO */
 .section__hero {
-    background-image: url('../images/pages/home/hero.png'); /* Path to your image */
-    background-size: cover; /* Cover the entire section without stretching */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    position: relative; /* Establish a positioning context */
-    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    background-image: url('../images/pages/home/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 70dvh; /* Adjusted to make sure it's always at least the full viewport height */
 }
 
 .section__hero::before {
-    content: ""; /* Necessary for the pseudo-element to be generated */
-    position: absolute; /* Position relative to its parent */
+    content: "";
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.1); /* Black with desired opacity; adjust as needed */
-    z-index: 1; /* Ensure it's above the background image */
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 /* Ensure content is layered above the pseudo-element */
 .section__hero > * {
-    position: relative; /* Make it stack above the ::before pseudo-element */
+    position: relative;
     z-index: 2;
 }
 
-/*Hero text*/
-
-.hero__text { 
-    /* max-width: 150rem; */
+.hero__text {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     color: var(--clr-body2);
     text-align: center;
+    max-width: 70%; /* Ensure it doesn't stretch too wide on larger screens */
 }
 
 .heading__hero {
+    margin-top: 0; /* Remove specific top margin to allow centering */
     padding-bottom: 2.8rem;
-    margin-top: 10%;
-}
-
-.heading__hero h1 {
-    font-size: var(--fs-title);
-    font-weight: var(--fw-bold);
     text-transform: uppercase;
 }
 
-.hero__p {
-    width: 70%;
-    font-size: var(--fs-h2);
-    padding-bottom: 2.8rem;
+.heading__hero h1 {
+    font-size: calc(4rem + 2vw); /* Example of responsive font size */
+    font-weight: var(--fw-bold);
+}
 
+.hero__p {
+    font-size: calc(1.6rem + 1vw); /* Responsive font size */
+    padding-bottom: 2.8rem;
+}
+
+@media (max-width: 1200px) {
+    /* Additional responsive adjustments if necessary */
 }
 
 

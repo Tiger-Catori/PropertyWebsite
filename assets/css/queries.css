@@ -1,33 +1,95 @@
 /* Media query for screen sizes up to 1300px */
 @media (max-width: 1300px) {
+    /* Adjust the history section for smaller screens */
+    .section__history {
+        margin-top: -2rem;
+    }
+
     .history__container {
         flex-direction: column;
-        align-items: center; /* Center the items for a column layout */
-        justify-content: center; /* Center the text within its container, if needed */
+        align-items: center;
+        justify-content: center;
+        margin-left: 0; /* Remove the margin left to allow full-width background */
+        margin-top: 0; /* Adjust if necessary to position correctly after the footer */
     }
 
     .history__container > * {
-        flex-basis: auto; /* Adjust flex-basis for a column layout */
+        flex-basis: 100%; /* Take full width in a column layout */
     }
 
     .history__container .container__image {
-        align-self: center; /* Center the image in the container */
+        justify-content: center;
     }
 
     .history__container .container__image img {
-        /* Adjust image transformation for a column layout */
-        transform: translateY(0); /* Reset Y translation as it may not be needed in column layout */
-        margin-top:-50%;
+        max-width: 100%; /* Allow the image to scale responsively */
+        margin-top: 0; /* Reset any previously set margins */
+        transform: translateX(-50%); /* Reset transformations that are no longer needed */
+        margin-left:50% ;
+        width: 80%;
+        height: auto;
     }
 
     .history__text {
-        /* Adjust text container styling for a column layout */
-        margin-bottom: -10%; /* Add some space above the text container when stacked */
-        margin-top: -4rem;
+        width: 100vw; /* Ensure the text container also spans the full width */
+        margin-right: 0; /* Reset any right margin */
+        padding-right: 4.8rem; /* Keep padding consistent */
+        margin-top: 0; /* Adjust the margin to ensure proper spacing */
+        position: relative; /* Maintain positioning context */
     }
 
     .history__text::after {
         content: '';
-        height: 40vh;
+        display: block;
+        position: absolute;
+        top: 100%; /* Position the pseudo-element just below the text */
+        left: 0;
+        right: 0;
+        width: 100vw; /* Span the full width of the viewport */
+        height: 30vh; /* Height of your choice to create a separation effect */
+        
+        background-color: var(--clr-accent); /* Match the background color */
+        z-index: -1; /* Ensure it doesn't overlap content */
+    }
+
+    .history__text p {
+        margin: 0 2.4rem; 
+    }
+}
+
+/* Mission section */
+/* Media query for screen sizes up to 1300px */
+@media (max-width: 1300px) {
+    .mission__container {
+        flex-direction: column;
+        /* width: 100vw; */
+        /* margin-left: calc(-50vw +50%); */
+    }
+
+    /* Adjust the mission section for smaller screens */
+    .mission__container .container__image:first-of-type,
+    .mission__container .container__image:last-of-type {
+        display: none; /* Hide the first and last images */
+    }
+    
+    .mission__container .image__2a {
+        display: flex; /* Show the .image__2a container */
+        width: 100%; /* Ensure it takes the full width */
+        /* Match padding with .mission__text for consistency */
+        padding: 0; /* You need to replace this with the actual padding values */
+    }
+    
+    .mission__container .image__2a img {
+        width: 100vw; /* Ensure the image inside .image__2a also takes the full width */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100vw;
+        object-fit: cover; /* Cover the area without losing aspect ratio */
+    }
+    
+    .mission__text {
+        width: 100vw; /* Ensure it spans the full viewport width */
+        margin: 0; /* Remove any margins */
+        padding: 4% 5% 4% 5%; /* Adjust padding as needed, be mindful of the scrollbar */
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
 }

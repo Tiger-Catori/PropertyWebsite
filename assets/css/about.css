@@ -13,13 +13,11 @@
 .history__container {
     display: flex;
     flex-direction: row;
-    /* flex-direction: column; */
-    /* column-gap: 6.4rem; */
-    row-gap: -2.4rem;
     align-items: center;
-    width: 100%;
-    position: relative; /* Add this to establish a stacking context */
-    /* flex-wrap: wrap */
+    width: 100%; /* Take full width of its parent */
+   /* max-width: 130rem;  Ensure it does not exceed the container__body's width */
+    margin: 0 auto; /* Center it within container__body */
+    margin-left: 3.5rem;
 }
 
 .history__container > * {
@@ -31,7 +29,7 @@
 .history__container .container__image {
     position: relative; /* Enable z-index manipulation */
     z-index: 2; /* Ensure it's above the text */
-    align-self: flex-end; /* Align to the edge of the flex container */
+    justify-content: center;
 }
 
 .history__container .container__image img {
@@ -39,14 +37,15 @@
     width: 100%;
     height: auto;
     /*transform: translateX(15%);  Adjust this value to control the overlap */
-    transform: translateY(-2rem);
+    /* transform: translateY(-2rem); */
     /* transform: translateY(-3%); */
 }
 
 .history__text {
     color: #fff;
     background-color: var(--clr-accent);
-    padding: 6% 8%; /* Increased padding for visual enlargement, adjust percentages as needed */
+    padding: 4.8rem; /* Increased padding for visual enlargement, adjust percentages as needed */
+    padding-right: 12%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -54,7 +53,7 @@
     position: relative;
     z-index: 1; /* Lower than the image to allow overlap */
     /* Optional: Adjust as necessary to overlap the image */
-    /* margin-right: -5%;  */
+    margin-right: -5%; 
 }
 
 /* Optional: Increase the size of .history__text by adjusting its scale */
@@ -63,5 +62,70 @@
     /* Adjust the origin of transformation if needed */
 }
 
+/* SECTION MISSION */
+.mission__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.4rem;
+    /* flex-wrap: wrap; */
+    position: relative; /* Ensure the container allows for absolute positioning of its children for overlap */
+}
 
+/* Assuming the images and text are direct children of .mission__container */
+.mission__container .container__image {
+    flex: 0 1 auto; /* Don't grow, allow shrink, and base size on the image's width */
+    position: relative; /* Set position relative to allow z-index to work */
+    z-index: 2;
+}
 
+.mission__container .container__image img {
+    width: 100%;
+    max-width: 555px; /* Override any max-width settings to ensure it takes up necessary space */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.mission__text {
+    color: #fff;
+    background-color: var(--clr-accent2);
+    padding: 4% 5%;
+    flex-grow: 0; /* Prevent the text box from growing to fill the space */
+    flex-shrink: 1; /* Allow it to shrink */
+    flex-basis: calc(80% - 4rem); /* Set the base size to 80% of what you'd want and subtract any desired overlap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 2rem; /* Creates space for the images to overlap */
+}
+
+/* To ensure images slightly overlap over the sides of the mission text container */
+.mission__container .container__image:first-of-type {
+    margin-right: -4rem; /* Negative margin to overlap the right side of the left image */
+}
+
+.mission__container .container__image:last-of-type {
+    margin-left: -4rem; /* Negative margin to overlap the left side of the right image */
+}
+
+/* Hide .image__2a by default */
+.mission__container .image__2a {
+    display: none; /* This ensures it's not displayed on larger screens */
+    justify-content: center;
+}
+
+/* PROPERTY SECTION */
+
+.property__container {
+    display: flex;
+    justify-content: center;
+}
+
+.property__text  {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+}

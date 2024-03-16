@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 2.4rem;
+    column-gap: 33vw;
 }
 
 .button {
