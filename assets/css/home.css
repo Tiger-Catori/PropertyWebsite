@@ -580,7 +580,7 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .card__container {
         width: auto; /* Allow the cards to adjust based on available space */
         margin-right: 620px; /* Adjust based on the image width to prevent overlap */
@@ -625,6 +625,13 @@
     
     .section__feature {
         margin-top: 0%;
+    }
+
+    .feature-icon__container {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        line-height: 200%;
+        
     }
 
     .testimonial__content {
