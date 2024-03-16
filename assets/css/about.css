@@ -103,11 +103,16 @@
 
 /* To ensure images slightly overlap over the sides of the mission text container */
 .mission__container .container__image:first-of-type {
-    margin-right: -4rem; /* Negative margin to overlap the right side of the left image */
+    /* Negative margin to overlap the right side of the left image */
+    margin-right: -8rem; 
+    z-index: -10;
 }
 
 .mission__container .container__image:last-of-type {
-    margin-left: -4rem; /* Negative margin to overlap the left side of the right image */
+     /* Negative margin to overlap the left side of the right image */
+     margin-left: -4rem;
+     margin-left: 0rem;
+    /* margin-top: 8rem; */
 }
 
 /* Hide .image__2a by default */
@@ -128,4 +133,73 @@
     flex-direction: column;
     width: 80%;
     text-align: center;
+}
+
+/* TEAMS SECTION */
+.section__team {
+    display: flex;
+    flex-direction: row;
+}
+
+.team__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team__container .heading {
+    text-align: center;
+}
+
+.team__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+    text-align: center;
+}
+
+.team__cards > * {
+    /* flex-basis: 33.3%; */
+}
+
+.team__cards img {
+    max-width: 376px;
+    width: 100%;
+    height: auto;
+}
+
+.team__cards h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    margin: 1.2rem 0;
+}
+
+.team__cards p {
+    font-size: var(--fs-body);
+}
+
+
+/* VIDEO SECTION */
+.section__video {
+    /* display: none; */
+}
+
+.video__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iframe {
+    width: 100%;
+    /* 16:9 RATIO*/
+    max-width: 100rem;
+    height: 56.25rem; 
+    max-width: 130rem;
+    height: 73.125rem; 
+    /* border-radius: 16px; */
 }

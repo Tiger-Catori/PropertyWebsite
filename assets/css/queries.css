@@ -55,11 +55,21 @@
     .history__text p {
         margin: 0 2.4rem; 
     }
+
+    .history__text  .heading__container {
+        margin-left: 2.4rem;
+        margin-right: 2.4rem;
+    }
 }
 
 /* Mission section */
 /* Media query for screen sizes up to 1300px */
 @media (max-width: 1300px) {
+
+    .section__mission {
+        margin-top: -7rem;
+    }
+
     .mission__container {
         flex-direction: column;
         /* width: 100vw; */
