@@ -130,8 +130,8 @@ html {
     /* background-color: var(--clr-back); */
     /* background-color: #000000f3; */
     color: var(--clr-body);
+    /* max-width: 150rem; */
     max-width: 130rem;
-    /* max-width: 130rem; */
     /* max-width: 100%; */
     /* padding: 0 3.2rem; */
     margin: 0 auto;

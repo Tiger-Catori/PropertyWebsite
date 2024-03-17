@@ -7,6 +7,7 @@
 
 .form__container > * {
     flex-basis: 50%;
+    flex-grow: 1;
 }
 
 .form__section {
@@ -36,6 +37,10 @@
     font-size: var(--fs-btn);
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.web__form {
+    flex-grow: 1;
 }
 
 .web__form h1 {
