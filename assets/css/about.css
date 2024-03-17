@@ -68,7 +68,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    row-gap: 2.4rem;
+    /* row-gap: 2.4rem; */
     /* flex-wrap: wrap; */
     position: relative; /* Ensure the container allows for absolute positioning of its children for overlap */
 }
@@ -198,8 +198,9 @@
     width: 100%;
     /* 16:9 RATIO*/
     max-width: 100rem;
+    /* height: 56.25rem;  */
     height: 56.25rem; 
-    max-width: 130rem;
-    height: 73.125rem; 
+    /* max-width: 130rem;
+    height: 73.125rem;  */
     /* border-radius: 16px; */
 }
