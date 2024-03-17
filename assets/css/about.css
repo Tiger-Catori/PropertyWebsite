@@ -135,6 +135,53 @@
     text-align: center;
 }
 
+
+/* INVEST SECTION */
+.section__invest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-body2);
+    position: relative; /* Ensure .section__invest is positioned */
+}
+
+.section__invest::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    right: 0;
+    top: 0;
+    width: 150vw; /* Span the entire width of the viewport */
+    height: 70%; /* Adjust as needed */
+    background: linear-gradient(80deg, #CB3939 40%, #093394 40%);
+    z-index: -1;
+}
+
+.invest__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    padding: 4% 6%;
+}
+
+.invest__container > * {
+    flex-basis: 50%;
+}
+
+.invest__button .heading {
+    text-align: start;
+}
+
+.invest__content img {
+    margin-top: 4rem;
+    max-width: 471px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
 /* TEAMS SECTION */
 .section__team {
     display: flex;

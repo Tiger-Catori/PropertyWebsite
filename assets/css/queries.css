@@ -103,3 +103,13 @@
         box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
 }
+
+/* INVEST section */
+/* Media query for screen sizes up to 1300px */
+@media (max-width: 1300px) {
+
+    .section__invest::after {
+       /* Adjust as needed */
+        background: linear-gradient(80deg, #CB3939 60%, #093394 60%);
+    }
+}
