@@ -57,8 +57,9 @@
     margin-bottom: 3.0em;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory; /* Optional: For smoother scrolling and snap effect */
-    
+    /* Optional: For smoother scrolling and snap effect */
+    /* scroll-snap-type: x mandatory;  */
+    scroll-behavior: smooth;
 }
 
   .slider-wrapper .image-list::-webkit-scrollbar {
