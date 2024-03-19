@@ -25,6 +25,35 @@
 }
 
 /* PREPARATION RENT SECTION*/
+.section__prep {
+    position: relative;
+}
+
+/* .section__prep::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: -40%;
+    width: 40vw;
+    height: 100%; 
+    background-color: #093394; 
+    z-index: -1; 
+} */
+
+.section__prep::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 80%; /* Adjust this value to control how far the background extends towards the right */
+    bottom: 0;
+    margin-left: -40%;
+    height: 100%; 
+    background-color: #093394; 
+    z-index: -1; 
+}
+
 .prep__container {
     display: flex;
     flex-direction: row;

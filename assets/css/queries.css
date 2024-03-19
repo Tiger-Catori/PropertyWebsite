@@ -120,11 +120,20 @@
 
 @media (max-width: 1200px) {
 
+    .section__prep::after {
+        content: '';
+        
+        background-color: #fff; 
+        
+    }
+
     .prep__container {
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    
 }
 
 /* LETTINGS section */

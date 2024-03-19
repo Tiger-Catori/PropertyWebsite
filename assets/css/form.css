@@ -245,6 +245,7 @@
 
 .how-it-works h1 {
     font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
     margin-bottom: 1.4rem;
 }
 
