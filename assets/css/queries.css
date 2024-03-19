@@ -145,11 +145,19 @@
         flex-wrap: wrap;
     }
 
-    .lettings__container > * {
+    .market__container {
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+
+    .lettings__container > *,
+    .market__container > * {
         flex-basis: 100%;
     }
 
-    .lettings__container .image__container {
+    .lettings__container .image__container,
+    .market__container .image__container {
         justify-content: center;
     
     }

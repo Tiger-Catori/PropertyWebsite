@@ -374,8 +374,8 @@
     /* 16:9 RATIO*/
     max-width: 100rem;
     height: 56.25rem; 
-    max-width: 130rem;
-    height: 73.125rem; 
+    /* max-width: 130rem;
+    height: 73.125rem;  */
     /* border-radius: 16px; */
 }
 
