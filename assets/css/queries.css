@@ -113,3 +113,35 @@
         background: linear-gradient(80deg, #CB3939 60%, #093394 60%);
     }
 }
+
+/*LANLORDS PAGE */
+
+/* PREP RENT section */
+
+@media (max-width: 1200px) {
+
+    .prep__container {
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* LETTINGS section */
+
+@media (max-width: 1200px) {
+
+    .lettings__container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .lettings__container > * {
+        flex-basis: 100%;
+    }
+
+    .lettings__container .image__container {
+        justify-content: center;
+    
+    }
+}

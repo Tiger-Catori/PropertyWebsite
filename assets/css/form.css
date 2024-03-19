@@ -234,3 +234,29 @@
     background-color: #f2f2f2;
     width: 100%; /* Ensure hover effect takes full width */
 }
+
+/* HOW IT WORKS */
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2.4rem;
+}
+
+.how-it-works h1 {
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.4rem;
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* gap: 2.4rem; */
+}
+
+.steps img {
+    max-width: 429px;
+    width: 100%;
+    height: auto;
+}

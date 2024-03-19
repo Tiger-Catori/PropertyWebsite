@@ -14,7 +14,71 @@
     margin-left: 0;
 }
 
+.intro__text .heading {
+    text-align: start;
+}
+
 .intro__text .button {
+    font-size: var(--fs-btn);
     margin-left: -1.2rem; /* Ensure button aligns to the far left */ /* Ensure the text inside the button starts right at the button's edge */
     display: inline-block; /* Makes the button only as wide as its content */
+}
+
+/* PREPARATION RENT SECTION*/
+.prep__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* column-gap: 6.4rem; */
+    row-gap: 4.8rem;
+    flex-wrap: wrap;
+
+}
+.prep__container .image__container {
+    flex-basis: 40%;
+}
+
+.prep__container img {
+    max-width: 398px;
+    width: 100%;
+    height: auto;
+}
+
+.prep__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 60%;
+}
+
+.prep__content .accordion {
+    margin: 0;
+    padding: 0;
+    margin-top: 1.6rem;
+}
+
+/* LETTING SECTION */
+
+.lettings__container {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    row-gap: 4.8rem;
+    column-gap: 6.4rem;
+}
+
+.lettings__container > * {
+    flex-basis: 50%;
+}
+
+.lettings__container .image__container {
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: flex-end;
+}
+
+.lettings__container img {
+    max-width: 514px;
+    width: 100%;
+    height: auto;
 }
