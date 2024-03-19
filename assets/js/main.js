@@ -4,53 +4,27 @@
 const currentYear = document.getElementById('current-year')
 currentYear.textContent = new Date().getFullYear();
 
+/* Form dropdown menu*/
+document.addEventListener('DOMContentLoaded', function () {
+    const selectBtn = document.querySelector('.select-menu');
+    const optionsList = document.querySelector('.options');
+
+    // Toggle dropdown visibility
+    selectBtn.addEventListener('click', function () {
+        optionsList.style.display = optionsList.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Option selection
+    document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', function () {
+            const selectedText = this.innerText;
+            document.querySelector('.selected').innerText = selectedText;
+            optionsList.style.display = 'none'; // Hide options after selection
+        });
+    });
+});
 
 // IMAGE SLIDER
-// const initSlider = () => {
-//     const imageList = document.querySelector(".slider-wrapper .image-list");
-//     const images = document.querySelectorAll(".slider-wrapper .image-list .image-item"); // Get all images
-//     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-//     const sliderScrollbar = document.querySelector(".slider__container .slider-scrollbar");
-//     const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-//     const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-//     const gap = 20; // Adjust based on your actual CSS
-
-//     if (images.length > 0) {
-//         const imageWidth = images[0].offsetWidth + gap; // Calculate the width of an image plus the gap
-
-//         // Handle scrollbar thumb drag
-//         scrollbarThumb.addEventListener("mousedown", (e) => {
-//             // Code remains the same as in your original function...
-//         });
-
-//         // Slide images according to the slide button clicks
-//         slideButtons.forEach(button => {
-//             button.addEventListener("click", () => {
-//                 const direction = button.id === "prev-slide" ? -1 : 1;
-//                 const scrollAmount = imageWidth * direction; // Use calculated image width for scroll amount
-//                 // Ensure the image is centered if possible
-//                 const newScrollPosition = imageList.scrollLeft + scrollAmount;
-//                 const maxScrollableWidth = imageList.scrollWidth - imageList.clientWidth;
-
-//                 // Scroll to the new position with smooth behavior
-//                 imageList.scroll({
-//                     left: Math.max(0, Math.min(newScrollPosition, maxScrollableWidth)),
-//                     behavior: "smooth"
-//                 });
-//             });
-//         });
-
-//         // Additional functions remain unchanged...
-//     }
-
-//     // Show or hide slide buttons based on scroll position
-//     // Update scrollbar thumb position based on image scroll
-//     // Call these two functions when image list scrolls
-// }
-
-// window.addEventListener("resize", initSlider);
-// window.addEventListener("load", initSlider);
-
 const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -174,3 +148,4 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+

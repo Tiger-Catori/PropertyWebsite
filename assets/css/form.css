@@ -1,14 +1,21 @@
-.form__container {
+.form__container, .form2__container {
     display: flex;
     flex-direction: row;
     column-gap: 6.4rem;
     row-gap: 4.8rem;
 }
 
-.form__container > * {
+.form__container > *,
+.form2__container > * {
     flex-basis: 50%;
     flex-grow: 1;
 }
+
+/* .form__container > * {
+    flex-basis: 50%;
+    flex-grow: 1;
+} */
+
 
 .form__section {
     display: flex;
@@ -27,7 +34,7 @@
     row-gap: 2rem;
 }
 
-.input {
+.input, .textarea {
     padding: 1.2rem 1.6rem;
     border: none; 
     border-radius: 2px;
@@ -39,8 +46,18 @@
     border-radius: 4px;
 }
 
+.input, .textarea, .dropdown {
+    width: 100%; /* Make these elements fill up the available space */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.dropdown .select-menu, .dropdown .options {
+    width: 100%; /* Ensure the dropdown menu and options also expand to full width */
+}
+
 .web__form {
     flex-grow: 1;
+    width: 90%;
 }
 
 .web__form h1 {
@@ -50,6 +67,7 @@
 
 .web__form p {
     margin-bottom: 1.6rem;
+    text-align: center;
 }
 
 
@@ -60,13 +78,19 @@
     align-items: center; /* This ensures vertical alignment is centered */
     justify-content: center;
     margin-top: 1.6rem;
+    font-size: var(--fs-btn);
+    /* font-size: var(--fs-btn); */
 }
 
 .label {
     display: flex;
     align-items: end;
-    font-size: var(--fs-btn);
+    /* font-size: var(--fs-btn); */
     margin-left: 3%;
+}
+
+.form2__container .label {
+    /* font-size: 1.2rem; */
 }
 
 /* Button */
@@ -126,4 +150,78 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .form2__container {
+        flex-wrap: wrap;
+    }
+}
+
+/*FORM 2*/
+
+/* DROPDOWN*/
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.select-menu {
+    width: 380px;
+    padding: 1.2rem 1.6rem;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: var(--fs-btn);
+    font-weight: var(--fw-reg);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    cursor: pointer; /* Ensure the cursor changes to pointer when hovering over the select menu */
+    /* Other styles remain unchanged */
+}
+
+.select-menu:hover {
+    background-color: #f2f2f2; /* Example hover color, adjust as needed */
+    /* Optionally, add other hover styles here */
+}
+
+.select-btn {
+    width: calc(100%); /* Adjust width to account for padding in the select-menu */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Ensure the select-btn fills the .select-menu */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Change from end to stretch to make child elements fill the container */
+    list-style: none;
+    font-size: var(--fs-btn);
+    padding: 0; /* Remove padding here to allow options to expand fully */
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    width: 100%; /* Ensure options container takes full width */
+}
+
+.options {
+    display: none; /* Add this line to initially hide the options */
+}
+
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Changed to stretch to fill the parent width */
+    padding: 1.2rem 1.6rem; /* Apply padding to option itself */
+    cursor: pointer;
+    background: #fff;
+    width: 100%; /* Ensure each option takes full width */
+}
+
+.option:hover {
+    background-color: #f2f2f2;
+    width: 100%; /* Ensure hover effect takes full width */
 }

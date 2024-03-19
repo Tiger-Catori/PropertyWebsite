@@ -1,0 +1,20 @@
+/* SECTION HERO */
+.section__hero {
+    background-image: url('../images/pages/landlords/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+.intro__text {
+    padding-left: 0; /* Ensure no padding is pushing contents inward */
+    margin-left: 0;
+}
+
+.intro__text .button {
+    margin-left: -1.2rem; /* Ensure button aligns to the far left */ /* Ensure the text inside the button starts right at the button's edge */
+    display: inline-block; /* Makes the button only as wide as its content */
+}
