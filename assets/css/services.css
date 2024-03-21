@@ -1,0 +1,73 @@
+/* SECTION HERO */
+.section__hero {
+    background-image: url('../images/pages/services-strategies/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+
+.intro__text {
+    padding-left: 0; /* Ensure no padding is pushing contents inward */
+    margin-left: 0;
+    /* object-fit: cover; */
+}
+
+.intro__text .heading {
+    text-align: start;
+}
+
+
+
+/* Services SECTION */
+.section__services::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 70%; /* Adjust this value to control how far the background extends towards the right */
+    top: 0;
+    margin-right: -40%;
+    height: 100%; 
+    background-color: #093394; 
+    top: 50%;
+    z-index: -1; 
+}
+
+
+
+.lettings__container, .market__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    row-gap: 4.8rem;
+    column-gap: 6.4rem;
+}
+
+.lettings__container > *,
+.market__container > * {
+    flex-basis: 50%;
+}
+
+.lettings__container .image__container {
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: flex-end;
+}
+
+.market__container .image__container {
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: flex-start;
+}
+
+
+.lettings__container img,
+.market__container img {
+    max-width: 514px;
+    width: 100%;
+    height: auto;
+}
