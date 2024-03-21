@@ -92,6 +92,7 @@
 .lettings__container, .market__container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     /* flex-wrap: wrap; */
     row-gap: 4.8rem;
     column-gap: 6.4rem;
