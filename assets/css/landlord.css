@@ -12,6 +12,7 @@
 .intro__text {
     padding-left: 0; /* Ensure no padding is pushing contents inward */
     margin-left: 0;
+    /* object-fit: cover; */
 }
 
 .intro__text .heading {
@@ -113,9 +114,65 @@
     justify-content: flex-start;
 }
 
+
 .lettings__container img,
 .market__container img {
     max-width: 514px;
     width: 100%;
     height: auto;
+}
+
+/* LANDLORD CARDS */
+.section__landlord-card {
+    display: flex;
+    color: #fff;
+    background: linear-gradient(80deg, #CB3939 50%, #093394 50%);
+    position: relative;
+    width: 105vw;
+    max-width: 105vw;
+    /* margin-left: calc(-50vw + 50%); */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    /* margin-top: -15%; */
+    justify-content: center;
+}
+
+.landlord-card__container {
+    max-width: 130rem;
+    padding: 0 2em;
+}
+
+.landlord-card__container .heading {
+    text-align: center;
+}
+
+.landlord__content {
+    display: flex;
+    flex-direction: row;
+    row-gap: 4.8rem;
+    column-gap: 6.4rem;
+}
+
+.landlord__card {
+
+}
+
+.icon__img {
+    background-color: #fff;
+    display: inline-flex;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.icon__img img {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.landlord__text h3 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.6rem;
 }

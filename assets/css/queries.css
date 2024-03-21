@@ -161,4 +161,12 @@
         justify-content: center;
     
     }
+
+}
+
+/* LANDLORD SECTION */
+@media (max-width: 1300px) {
+    .landlord__content {
+        flex-direction: column;
+    }
 }
