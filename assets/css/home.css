@@ -1,4 +1,20 @@
 /* Adjustments for the benefits container */
+.section__benefits {
+    position: relative;
+}
+.section__benefits::after {
+    content: '';
+    position: absolute;
+    left: 70%;
+    right: 0; /* Adjust this value to control how far the background extends towards the right */
+    bottom: 0;
+    margin-left: 0%;
+    width: 50vw;
+    height: 100%; 
+    background: linear-gradient(10deg, #CB3939 50%, #093394 50%); 
+    z-index: -1; 
+}
+
 .benefits__container {
     display: flex;
     flex-direction: column;
@@ -8,56 +24,6 @@
     position: relative; /* Position relative to allow absolute positioned pseudo-element */
     overflow: hidden; /* Ensure the pseudo-element's part outside the container is hidden */
 }
-
-/* .benefits__container {
-    position: relative; 
-    width: 100vw;
-    max-width: 100%;
-    overflow: hidden;
-} */
-
-/* Red+Blue backgound slope 1/3*/
-.benefits__container::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    /* left: 66%; */
-    top: 0;
-    bottom: 0;
-    width: 33%; 
-    max-width: 33%;
-    /* width: 100vw;  */
-    /* max-width: 100vw; */
-    background: linear-gradient(10deg, #CB3939 50%, #093394 50%); /* Adjusted to 10deg for a 20-degree slant from the vertical */
-    z-index: -5;
-    /* margin-right: -10%; */
-    /* z-index: 0; */
-    /* opacity: 0.25; */
-}
-
-/* .benefits__container::after {
-    content: '';
-    position: absolute;
-    left: 66%;
-    right: 0;
-    bottom: 0;
-    width: 150vw;
-    height: 60%; 
-    background-color: #093394; 
-    z-index: -1; 
-} */
-
-/* .benefits__container::after {
-    content: "";
-    position: absolute;
-    left: 66%; 
-    max-width: 100vw;
-    top: 0;
-    bottom: 0;
-    right: 0; 
-    background: linear-gradient(10deg, #CB3939 50%, #093394 50%);
-    z-index: -5;
-} */
 
 /* New styling for the content container */
 .content__container {
@@ -523,6 +489,13 @@
         flex-wrap: wrap;
     }
 
+    .section__benefits::after {
+        content: "";
+        height: 40%;
+        left: 60%;
+        bottom: 5%;
+    }
+
     .benefits__container::after {
         content: "";
         position: absolute;
@@ -531,7 +504,7 @@
         bottom: 0; /* Ensures the element starts at the bottom */
         height: 40%; /* Adjust if you want to change the height */
         width: 45%; /* One-third of the container width */
-        background: linear-gradient(10deg, #CB3939 50%, #093394 50%);
+        /* background: linear-gradient(10deg, #CB3939 50%, #093394 50%); */
         z-index: -5;
     }
 
@@ -581,7 +554,7 @@
         bottom: 0; /* Ensures the element starts at the bottom */
         height: 20%; /* Adjust if you want to change the height */
         width: 45%; /* One-third of the container width */
-        background: linear-gradient(10deg, #CB3939 50%, #093394 50%);
+        /* background: linear-gradient(10deg, #CB3939 50%, #093394 50%); */
         z-index: -5;
     }
     
