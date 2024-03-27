@@ -144,7 +144,7 @@
         flex-wrap: wrap;
     }
 
-    .market__container {
+    .market__container, .contact__wrap {
         justify-content: center;
         flex-wrap: wrap-reverse;
     }
@@ -163,9 +163,25 @@
 
 }
 
-/* LANDLORD SECTION */
+/* LANDLORD & CONTACT SECTION */
 @media (max-width: 1300px) {
     .landlord__content {
         flex-direction: column;
     }
+
+    #contact__wrap {
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+    
+    .contact__container {
+        background-color: var(--clr-accent2);
+        right: 0;
+        left: 0;
+        width: 100vw;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    
 }
+

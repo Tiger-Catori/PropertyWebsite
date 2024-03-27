@@ -59,7 +59,7 @@
     scrollbar-width: none;
     /* Optional: For smoother scrolling and snap effect */
     scroll-snap-type: x mandatory; 
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
   .slider-wrapper .image-list::-webkit-scrollbar {

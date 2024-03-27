@@ -126,6 +126,24 @@ function removeOpen(index1){
     })
 }
 
+// CONTACT PAGE BACKGROUND COLOR HEIGHT
+
+function adjustBackgroundHeight() {
+    var formSection = document.querySelector('.form__section');
+    var contactContainer = document.querySelector('.contact__container');
+    if (formSection && contactContainer) {
+        var formHeight = formSection.offsetHeight;
+        contactContainer.style.height = formHeight + 'px';
+    }
+}
+
+// Adjust on load
+window.onload = adjustBackgroundHeight;
+
+// Adjust on window resize
+window.onresize = adjustBackgroundHeight;
+
+
 // IMAGE SLIDER
 
 $('.owl-carousel').owlCarousel({

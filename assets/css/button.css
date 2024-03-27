@@ -49,7 +49,7 @@
 
 .footer-button {
     padding: 1rem 1.6rem;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     transform: scale(0.85);
 } 
 
@@ -62,5 +62,8 @@
     /* font-weight: 600; */
 }
 
-
+.footer .clear-button {
+    width: 100%;
+    margin-left: -1.6rem;
+}
 
