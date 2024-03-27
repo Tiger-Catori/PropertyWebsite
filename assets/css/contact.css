@@ -47,7 +47,8 @@
     position: absolute; /* Position it relative to .contact__container */
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    left: -60vw; /* Extend to the left of the viewport */
+    left: -65vw; /* Extend to the left of the viewport */
+    right: 0;
     top: 0;
     bottom: 0;
     width: calc(100vw - 6.4rem); /* Adjusted width */
