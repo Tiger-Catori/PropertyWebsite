@@ -51,6 +51,7 @@
 
 .navbar-collapse {
     justify-content: center; /* Center flex items horizontally in the container */
+    font-size: var(--fs-h3);
 }
 
 .navbar-nav {
