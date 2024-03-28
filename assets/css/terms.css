@@ -1,0 +1,28 @@
+/* SECTION HERO */
+.section__hero {
+    background-image: url('../images/pages/property-deals/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+
+.section__terms {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.details__container {
+    margin-top: 9.6rem;
+}
+
+.term__text p {
+    font-size: var(--fs-body);
+}
+
+#details__headings {
+    font-size: var(--fs-h2);
+}

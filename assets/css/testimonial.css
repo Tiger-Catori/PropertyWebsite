@@ -128,3 +128,9 @@
         width: 80%;
     }
 }
+
+
+/* Hiding testmonial buttons */
+.owl-nav {
+    display: none;
+}
