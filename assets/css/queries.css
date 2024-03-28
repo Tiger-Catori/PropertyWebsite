@@ -178,10 +178,16 @@
         background-color: var(--clr-accent2);
         right: 0;
         left: 0;
-        width: 100vw;
+        /* left: -45vw; */
+        width: 200vw;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
     }
     
+    .contact__container::after {
+        left: -45vw;
+    }
+
+
 }
 
