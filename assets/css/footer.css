@@ -174,3 +174,21 @@ ul {
         padding: 0 10px; /* Ensure padding is consistent for very small screens */
     }
 }
+
+
+.footer .footer-brand li {
+    width: 100%; /* Ensure the list item takes full width */
+}
+
+.button-link {
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Inherits the color from the parent elements */
+    display: block; /* Change this from inline-block to block to fill the width */
+    width: 100%; /* Ensure the link takes full width */
+}
+
+.button.clear-button.footer-button {
+    width: 100%; /* Make sure this is set to fill the width of the .button-link */
+    margin-left: 0; /* Adjust if needed to align with your design */
+    transform: scale(1); /* Adjust scaling if necessary to fill the container */
+}

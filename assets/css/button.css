@@ -62,8 +62,13 @@
     /* font-weight: 600; */
 }
 
-.footer .clear-button {
+.footer .clear-button, .footer-button {
     width: 100%;
     margin-left: -1.6rem;
 }
 
+.button-link {
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Inherits the color from the parent elements */
+    display: inline-block; /* This makes the <a> element behave like a block, containing the button */
+}
