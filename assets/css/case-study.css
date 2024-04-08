@@ -1,0 +1,288 @@
+.section__hero {
+    background-image: url('../images/pages/success-stories/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+
+.section__stories {
+    position: relative;
+}
+
+.section__stories::after {
+    content: '';
+    position: absolute;
+    left: -30%;
+    right: 0; /* Adjust this value to control how far the background extends towards the right */
+    bottom: 0;
+    margin-left: 0%;
+    width: 200vw;
+    height: 100%; 
+    background: linear-gradient(10deg, var(--clr-accent) 50%, var(--clr-accent2) 50%); 
+    z-index: -1; 
+}
+
+.stories__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.8rem;
+}
+
+.stories__card {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.stories__card > * {
+    flex-basis: 50%;
+}
+
+.stories__img {
+    max-width: 570px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.stories__img img {
+    max-width: 570px;
+    width: 100%;
+    height: auto;
+}
+
+.stories__card {
+    background-color: #fff;
+    /* flex-wrap: wrap; */
+}
+
+.stories__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stories__text {
+    padding: 2.6rem 1.2rem ;
+}
+
+
+.stories__text h2, .stories__head h3 {
+    font-size: var(--fs-h2);
+    color: var(--clr-accent);
+    font-weight: 600;
+}
+
+.list {
+    /* list-style: circle; */
+    list-style: inside;
+    font-weight: 500;
+    margin-top: 2.4rem;
+}
+
+.list span {
+    color: var(--clr-accent);
+}
+
+.house__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* column-gap: 3.2rem; */
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    width: 70%;
+}
+
+.house__card {
+    font-weight: 500;
+}
+
+.house__card h4 {
+    font-size: var(--fs-h3);
+}
+
+.house__card p {
+    font-size: var(--fs-btn);
+    color: #888;
+}
+
+.stories__img {
+    position: relative;
+    /* overflow: hidden; */
+    overflow: visible;
+    width: 100%; /* Adjust width as needed */
+    display: flex; /* Center the image and buttons */
+    align-items: center;
+}
+
+.slide-button {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background-color: #333;
+    color: #FFF;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-button:hover {
+    background: #404040;
+}
+
+.prev {
+    left: -25px; /* Half outside the container */
+}
+
+.next {
+    right: -25px; /* Half outside the container */
+}
+
+/* Adjustments for the box-icon size if needed */
+.slide-button i.bx {
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+
+
+.stories__img {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    overflow: visible; /* Ensures only the current slide is visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stories__button {
+    overflow: hidden; /* Ensures only the current slide is visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    width: 100%;
+    height: auto; /* Adjust based on your images */
+}
+
+.slide {
+    flex: 0 0 100%; /* Each slide takes up 100% of the container width */
+    width: 100%; /* Ensures the slide fills the container */
+    height: auto; /* Adjust height as necessary */
+    display: block;
+}
+
+.slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    /* Other styles remain unchanged */
+}
+
+
+@media (max-width: 1300px) {
+    .stories__card {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0; /* Adjusted to ensure some spacing and centered alignment */
+        padding: 0;
+        width: 100%;
+        /* max-width: calc(100% - 20px);  */
+        background-color: transparent;
+        transform: scaleX(1.03); /* Keep if necessary for your design, but might affect usability */
+        box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+    }
+
+    .stories__img, .stories__text {
+        background-color: #fff;
+        width: 100%; /* Ensure these elements fill the card */
+    }
+
+    .stories__text {
+        padding: 2.4rem; /* Provide internal spacing for the text content */
+    }
+
+    /* Adjust the card size more responsively based on screen width */
+    @media (max-width: 1024px) {
+        .stories__card {
+            max-width: calc(100% - 10px); /* Use more of the available width */
+            margin: 5px auto; /* Reduce margin as the screen gets smaller */
+            transform: scaleX(1); /* Optionally reset transform for smaller screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .stories__card {
+            /* Increase utilization of available space on very small screens */
+            max-width: calc(100% - 5px); /* Almost full width, accounting for a tiny margin */
+            margin: 2px auto; /* Minimal margin for very small devices */
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .stories__card {
+        flex-direction: column; /* Ensures content stacks vertically on smaller screens */
+        width: 100%; /* Expands the card to use the full width of the screen */
+        margin: 0.6rem auto; /* Adds a bit of margin around the card for visual separation */
+        padding: 1.5rem; /* Increases padding to make the card content more prominent */
+        box-sizing: border-box; /* Ensures padding doesn't add to the set width */
+    }
+
+    .stories__img, .stories__text {
+        margin-bottom: 1rem; /* Adds margin below each section for better visual separation */
+    }
+
+    .stories__img {
+        /* If there's a specific aspect ratio or size you want for the images */
+        height: auto; /* Adjusts the height automatically based on the width */
+    }
+
+
+
+}
+
+@media (max-width: 1300px) {
+    .stories__card {
+        flex-direction: column; /* Content stacks vertically on smaller screens */
+        width: 100%; /* Card uses full width of the screen */
+        margin: 0.6rem auto; /* Margin for visual separation */
+        padding: 1.5rem; /* Padding to make content more prominent */
+        box-sizing: border-box; /* Padding doesn't add to the width */
+    }
+
+    .stories__img, .stories__text {
+        max-width: 100%; 
+        width: 100%; /* Ensures both img and text sections fill the card's width */
+        margin-bottom: 1rem; /* Margin below each for better separation */
+    }
+
+    .stories__img img {
+        max-width: 100%; 
+        width: 100%; /* Ensure the image itself fills the .stories__img container */
+        height: auto; /* Adjusts height automatically to maintain aspect ratio */
+    }
+
+    .stories__img {
+        height: auto; /* Optional: Adjust based on your design needs */
+    }
+}
+
