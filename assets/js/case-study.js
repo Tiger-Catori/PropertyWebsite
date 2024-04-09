@@ -1,42 +1,64 @@
 'use strict'
 
+
+// Cards image slider functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Use querySelectorAll to get all instances of '.stories__card'
     const storiesCards = document.querySelectorAll('.stories__card');
 
     storiesCards.forEach(card => {
         const slides = card.querySelectorAll('.slide');
         let currentIndex = 0; // Initialize currentIndex for each '.stories__card'
+        let startX; // Variable to store the start x position of touch
 
-        // Function to update the slide position based on currentIndex
         function updateSlidePosition() {
             const shiftPercentage = currentIndex * (-100);
             card.querySelector('.slides-container').style.transform = `translateX(${shiftPercentage}%)`;
         }
 
-        // Function to adjust currentIndex and loop the slides
         function adjustForLoop() {
             if (currentIndex < 0) {
-                currentIndex = slides.length - 1; // Loop back to the last slide if going back from the first
+                currentIndex = slides.length - 1;
             } else if (currentIndex >= slides.length) {
-                currentIndex = 0; // Loop back to the first slide if going forward from the last
+                currentIndex = 0;
             }
-            updateSlidePosition(); // Apply the updated position to the slides
+            updateSlidePosition();
         }
 
-        // Attach event listeners to '.prev' and '.next' buttons within each '.stories__card'
         card.querySelector('.prev').addEventListener('click', function() {
-            currentIndex--; // Decrement currentIndex on prev click
-            adjustForLoop(); // Adjust the slide position accordingly
+            currentIndex--;
+            adjustForLoop();
         });
 
         card.querySelector('.next').addEventListener('click', function() {
-            currentIndex++; // Increment currentIndex on next click
-            adjustForLoop(); // Adjust the slide position accordingly
+            currentIndex++;
+            adjustForLoop();
         });
 
-        // Initial call to set the slides position when the page loads
+        // Touch start handler
+        card.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        }, false);
+
+        // Touch end handler
+        card.addEventListener('touchend', function(e) {
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+
+            // Threshold for swipe detection, adjust as needed
+            const threshold = 50;
+
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    // Swiped left, go to next slide
+                    currentIndex++;
+                } else {
+                    // Swiped right, go to previous slide
+                    currentIndex--;
+                }
+                adjustForLoop();
+            }
+        }, false);
+
         updateSlidePosition();
     });
 });
-

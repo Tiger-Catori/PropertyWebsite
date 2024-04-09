@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .section__hero {
     background-image: url('../images/pages/success-stories/hero.png'); /* Path to your image */
     background-size: cover; /* Cover the entire section without stretching */
@@ -205,7 +209,7 @@
         padding: 0;
         width: 100%;
         /* max-width: calc(100% - 20px);  */
-        background-color: transparent;
+        /* background-color: transparent; */
         transform: scaleX(1.03); /* Keep if necessary for your design, but might affect usability */
         box-sizing: border-box; /* Ensure padding and border are included in width calculation */
     }
@@ -243,7 +247,7 @@
         flex-direction: column; /* Ensures content stacks vertically on smaller screens */
         width: 100%; /* Expands the card to use the full width of the screen */
         margin: 0.6rem auto; /* Adds a bit of margin around the card for visual separation */
-        padding: 1.5rem; /* Increases padding to make the card content more prominent */
+        padding: 0 ;
         box-sizing: border-box; /* Ensures padding doesn't add to the set width */
     }
 
@@ -264,8 +268,8 @@
     .stories__card {
         flex-direction: column; /* Content stacks vertically on smaller screens */
         width: 100%; /* Card uses full width of the screen */
-        margin: 0.6rem auto; /* Margin for visual separation */
-        padding: 1.5rem; /* Padding to make content more prominent */
+        margin: 0 auto; /* Margin for visual separation */
+        padding: 0; /* Padding to make content more prominent */
         box-sizing: border-box; /* Padding doesn't add to the width */
     }
 
