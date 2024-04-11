@@ -1,4 +1,8 @@
 /* Adjustments for the benefits container */
+body {
+    overflow-x: hidden;
+}
+
 .section__benefits {
     position: relative;
 }

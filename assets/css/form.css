@@ -82,11 +82,12 @@
     /* font-size: var(--fs-btn); */
 }
 
-.checkbox-container span {
+.checkbox-container span a {
     color: var(--clr-accent);
+    text-decoration: none;
 }
 
-.checkbox-container span:hover {
+.checkbox-container span a:hover {
     text-decoration: underline;
 }
 

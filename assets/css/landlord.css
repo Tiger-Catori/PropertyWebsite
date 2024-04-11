@@ -1,4 +1,8 @@
 /* SECTION HERO */
+body {
+    overflow-x: hidden;
+}
+
 .section__hero {
     background-image: url('../images/pages/landlords/hero.png'); /* Path to your image */
     background-size: cover; /* Cover the entire section without stretching */
@@ -177,3 +181,4 @@
     font-weight: var(--fw-bold);
     margin-bottom: 1.6rem;
 }
+

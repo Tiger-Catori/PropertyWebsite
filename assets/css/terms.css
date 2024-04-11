@@ -26,3 +26,8 @@
 #details__headings {
     font-size: var(--fs-h2);
 }
+
+
+body {
+    overflow-x: hidden;
+}
