@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/button.css">
     <link rel="stylesheet" href="assets/css/header.css">
@@ -67,7 +67,7 @@
                             <a class="nav-link" href="property.html"><span>Property</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#"><span>Insights</span></a>
+                            <a class="nav-link" href="insights.html"><span>Insights</span></a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="case-study.html"><span>Case Study</span></a>
@@ -272,6 +272,44 @@
                 </div>
             </div>
         </section>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="image-item" src="assets/images/property-photos/SERA-01.jpg" alt="img-1" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="image-item" src="assets/images/property-photos/SERA-02.jpg" alt="img-2" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="image-item" src="assets/images/property-photos/SERA-03.jpg" alt="img-3" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="image-item" src="assets/images/property-photos/SERA-25.jpg" alt="img-4" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="image-item" src="assets/images/property-photos/SERA-33.jpg" alt="img-5" />
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
 
         <!-- VIDEO SECTION -->
         <section class="section section__video">
@@ -769,6 +807,32 @@
 
     <!--   *****   Owl Carousel js Link  *****  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
