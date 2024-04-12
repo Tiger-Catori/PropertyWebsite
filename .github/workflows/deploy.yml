@@ -33,5 +33,5 @@ jobs:
           server: ftp.ccn.yqp.mybluehost.me
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /h4p.webmagnetism.com
+          server-dir: /h4p.webmagnetism.com/
           protocol: ftp
