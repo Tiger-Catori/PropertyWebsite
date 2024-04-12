@@ -27,9 +27,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       uses: actions/checkout@v3
 
-    - name: Directory Permissions
-      run: chmod -R 777 storage bootstrap/cache
-
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
