@@ -1,5 +1,14 @@
 "use strict"
 
+
+window.onscroll = () => {
+    // Target elements
+    const navBar = document.querySelector(".navbar");
+
+    if (document.documentElement.scrollTop > 100) navBar.classList.add("navbar-scroll-bg");
+    else navBar.classList.remove("navbar-scroll-bg");
+}
+
 // Current year (footer)
 const currentYear = document.getElementById('current-year')
 currentYear.textContent = new Date().getFullYear();

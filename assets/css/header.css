@@ -6,13 +6,14 @@
 }
 
 .navbar {
-    position: sticky !important;
     top: 0;
     z-index: 1000; 
-    background-color: rgba(0, 0, 0, 0.9); /* Example: semi-transparent black; adjust as needed */
-    /* background-color: #080707; */
+    background-color: transparent;
     opacity: 0.9;
-    position: sticky !important;
+}
+
+.navbar-scroll-bg{
+    background-color: #00000075;
 }
 
 .navbar-collapse {
