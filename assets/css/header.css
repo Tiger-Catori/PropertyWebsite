@@ -130,6 +130,10 @@
     } */
 }
 
+.swiper-slide{
+    transition: .7s cubic-bezier(0.86, 0, 0.07, 1) all;
+}
+
 .swiper-slide-active{
     width: 1000px !important;
 }
