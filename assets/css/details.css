@@ -1,0 +1,156 @@
+/* SECTION HERO */
+body {
+    overflow-x: hidden;
+}
+
+.section__hero {
+    background-image: url('../images/pages/property-details/hero.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire section without stretching */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: relative; /* Establish a positioning context */
+    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
+    
+}
+/*BULLET POINTS*/
+.section__bullet {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    /* background-color: var(--clr-accent); */
+    color: #fff;
+    overflow: hidden; /* Ensures the pseudo-element doesn't cause overflow */
+
+}
+
+.section__bullet::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw; /* Width equal to the viewport width */
+    height: 100%; /* Full height of the parent */
+    background-color: var(--clr-accent);
+    transform: translateX(-50%); /* Centers the element if the parent has padding/margin */
+    z-index: -1; /* Ensures it doesn't overlap content */
+}
+
+.bullet__container {
+    position: relative; /* Ensure it's positioned above the ::after pseudo-element */
+    display: flex;
+    align-items: center;
+    row-gap: 4.8rem;
+    column-gap: 6.4rem;
+    justify-content: center;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+
+.image-container img {
+    max-width: 452px;
+    width: 100%;
+    height: auto;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    list-style: circle;
+    font-size: var(--fs-h3);
+}
+
+/* FINANCIAL */
+.financial__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* background-color: var(--clr-accent2); */
+}
+
+.financial__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 80%; */
+    width: 100%;
+    /* font-size: var(--fs-h3); */
+    border-radius: 1rem;
+    box-shadow: var(--bs-1);
+}
+
+.heading-container {
+    background-color: #2556d3;
+    color: #fff;
+    padding: 1.4rem 0;
+    margin-bottom: 1.4rem;
+    border-top-left-radius: 1rem; 
+    border-top-right-radius: 1rem; 
+}
+
+.heading-container h2 {
+    justify-content: center;
+    text-align: center;
+    font-size: var(--fs-h3);
+    
+}
+
+.financial__card li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin: 0 2.4rem;
+    margin-bottom: 1.4rem;
+
+}
+
+
+.financial__list {
+    margin: 0;
+    padding: 0 ;
+}
+
+.financial__list li:last-of-type {
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+}
+
+/* Summary section */
+
+.summary__container {
+    display: flex;
+    
+    justify-content: center;
+}
+
+.summary__text {
+    display: flex;
+    flex-direction: row;
+    row-gap: 2.4rem;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.summary__text > *{
+    flex-basis: 50%;
+    /* justify-content: center; */
+}
+
+.summary__text h1 {
+    font-size: var(--fs-h1);
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    /* text-align: center; */
+}
+
+
+@media (max-width: 1300px) {
+
+
+   .summary__text {
+    flex-direction: column;
+    
+   }
+
+}

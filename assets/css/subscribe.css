@@ -85,31 +85,29 @@
 
 .section__subscribe .input-box input {
   height: 100%;
-  width: 100%;
+  width: calc(100% - 14rem); /* Adjust width to leave space for the button */
   outline: none;
-  /* font-size: 18px; */
   font-weight: 400;
   border: none;
   padding: 2.4rem 4rem;
   background-color: transparent;
 }
 
-
 .section__subscribe .input-box .button__sub {
+  position: absolute;
+  top: 50%;
+  right: 1rem; /* Adjust right positioning to fit within input box */
+  transform: translateY(-50%);
   text-transform: uppercase;
-  right: 20px;
-  /* font-size: var(--fs-body); */
   font-weight: 400;
   color: #fff;
-  /* color: #111; */
   border: none;
-  padding: 12px 30px;
-  border-radius: 4px;
-  /* background-color: #4070f4; */
+  padding: 1.2rem 3rem;
+  border-radius: 0.4rem;
   background-color: var(--clr-accent2);
   cursor: pointer;
-  filter: brightness(0.97);
 }
+
 
 .section__subscribe .input-box .button__sub:hover {
   filter: brightness(1.05);
@@ -162,4 +160,57 @@
     max-width: none; /* Remove max-width restriction */
   }
   
+}
+
+@media screen and (max-width: 900px) {
+  .section__subscribe .subscribe__card {
+    flex-direction: column;
+    padding: 2.4rem;
+    align-items: center;
+    /* bottom: 0; */
+  }
+
+  .section__subscribe .input-box {
+    order: 2; /* Ensure input box is below the heading */
+    width: 80%; /* Full width for smaller screens */
+    padding-right: 4rem; /* Leave space for the button */
+  }
+
+  .section__subscribe .input-box input {
+    width: calc(100% - 50px); /* Adjust width to accommodate the button inside the box */
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .section__subscribe .subscribe__card {
+      padding: 1.2rem;  /* Reduce padding */
+      flex-direction: column;
+      bottom: 0; 
+  }
+
+  .section__subscribe .subscribe__card .heading {
+      font-size: var(--fs-h4);  /* Smaller font size for the heading */
+      margin-bottom: 0.8rem;  /* Less space between heading and input */
+  }
+
+  .section__subscribe .input-box {
+      height: 5rem;  /* Reduce the height to save space */
+      margin: 0;  /* Remove external margins */
+      padding: 0 1rem;  /* Reduce padding, adjust as needed */
+      flex-basis: 100%;  /* Ensure it takes full width */
+  }
+
+  .section__subscribe .input-box input {
+      width: calc(100% - 80px);  /* Adjust width to leave space for the button */
+      padding: 0.8rem;  /* Reduced padding */
+      font-size: var(--fs-btn);  /* Smaller font size for text input */
+  }
+
+  .section__subscribe .input-box .button__sub {
+      width: 70px;  /* Set a fixed width for the button */
+      padding: 0.4rem;  /* Reduce padding */
+      font-size: var(--fs-btn);  /* Reduce font size */
+      right: 10px;  /* Adjust positioning to fit within the input box */
+  }
 }
