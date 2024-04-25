@@ -12,6 +12,7 @@ body {
     height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
     
 }
+
 /*BULLET POINTS*/
 .section__bullet {
     position: relative; /* Needed for absolute positioning of the pseudo-element */
@@ -118,8 +119,9 @@ body {
 
 .summary__container {
     display: flex;
-    
+    flex-direction: column;
     justify-content: center;
+    row-gap: 4.8rem;
 }
 
 .summary__text {
@@ -127,9 +129,10 @@ body {
     flex-direction: row;
     row-gap: 2.4rem;
     /* flex-wrap: wrap; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    /* width: 80%; */
 }
 
 .summary__text > *{
@@ -144,13 +147,121 @@ body {
     /* text-align: center; */
 }
 
+.summary__text p {
+    justify-content: flex-end;
+}
+
+.summary__slides {
+    justify-content: center;
+}
+
+/*slide images*/
+.slide__img {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* align-items: center; */
+    row-gap: 4.8rem;
+    /* gap: 2.8rem; */
+}
+
+.slide__img img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+}
+
+.slide__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 446px;
+    width: 100%;
+    height: auto;
+    row-gap: 2.4rem;
+}
+
+.slide__col img {
+    max-width: 446px;
+    width: 100%;
+    height: auto;
+}
+
+/*slide buttons*/
+.button__box {
+    display: flex;
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1.8rem;
+
+}
+
+
+.slide__col .slide-button {
+    /* position: absolute; */
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    z-index: 5;
+    /* color: #fff; */
+    color: #000;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    /* background: #000; */
+    background: #ddd;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    /* transform: translateY(-50%); */
+}
+
+.slide__col .slide-button:hover {
+    background: #eee; 
+    /* color: #404040;*/
+}
+
+.slide__col .slide-button#prev-slide {
+/* left: -25px; */
+/* display: none; */
+}
+
+.slide__col.slide-button#next-slide {
+/* right: -25px; */
+/* display: none; */
+}
+
 
 @media (max-width: 1300px) {
 
+
+    .button__box {
+        justify-content: center;
+    }
 
    .summary__text {
     flex-direction: column;
     
    }
 
+   .slide__img {
+    /* flex-direction: column; */
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 6.4rem;
+    justify-content: center;
+   }
+
+   .slide__col {
+    justify-content: center;
+    width: 100%;
+   }
+
+   .slide__col p {
+    display: none;
+   }
 }
