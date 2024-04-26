@@ -54,13 +54,19 @@ body {
 
 .project__links:hover, .project__links:focus {
     /* background-color: var(--clr-accent2); */
+    /* background-color: #f2f2f2; */
+    background-color: #fff;
+    /* color: var(--clr-body); */
+    color: var(--clr-body);
+}
+
+.nav-link.active {
     background-color: var(--clr-accent);
-    color: var(--clr-body2);
 }
 
 /* Project Cards */
 
-.project__cards {
+.project__cards, #current-projects, #completed-projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,6 +75,7 @@ body {
     row-gap: 5.4rem;
     text-align: center;
     /* overflow: hidden; */
+    
 }
 
 .project__cards > * {
@@ -77,13 +84,10 @@ body {
 
 .project__card {
     overflow: hidden;
+    /* flex-basis: 50%; */
+    /* width: max-content; */
+    /* flex: 1 1 calc(50%); */
 }
-
-/* .project__card img {
-    max-width: 560px;
-    width: 100%;
-    height: auto;
-} */
 
 .project__text {
     display: flex;
@@ -101,6 +105,7 @@ body {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
 }
+
 
 /*Card images*/
 
@@ -127,9 +132,17 @@ body {
 }
 
 
-/*MORE Button*/
+/* MORE Button*/
 #button__more {
     width: 20%;
     margin: 0 auto ;
     margin-top: 3.6rem;
+}
+
+.tab-pane {
+    display: none; /* Default state handled by Bootstrap JS */
+}
+
+.tab-pane.active {
+    display: flex; /* or 'flex' if needed for your layout */
 }
