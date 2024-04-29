@@ -116,7 +116,6 @@ body {
 }
 
 /* Summary section */
-
 .summary__container {
     display: flex;
     flex-direction: column;
@@ -128,23 +127,18 @@ body {
     display: flex;
     flex-direction: row;
     row-gap: 2.4rem;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
     justify-content: center;
     align-items: center;
-    /* width: 80%; */
 }
 
-.summary__text > *{
+.summary__text > * {
     flex-basis: 50%;
-    /* justify-content: center; */
 }
 
 .summary__text h1 {
     font-size: var(--fs-h1);
     text-transform: uppercase;
     font-weight: var(--fw-bold);
-    /* text-align: center; */
 }
 
 .summary__text p {
@@ -155,113 +149,234 @@ body {
     justify-content: center;
 }
 
-/*slide images*/
+/* Slide images container adjustments */
 .slide__img {
     display: flex;
-    justify-content: space-between;
-    /* justify-content: center; */
-    /* align-items: center; */
+    flex-direction: column; /* Changed to column to stack components */
+    align-items: center; /* Center-align the children */
     row-gap: 4.8rem;
-    /* gap: 2.8rem; */
 }
 
-.slide__img img {
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width */
+}
+
+.images-container img {
     max-width: 340px;
     width: 100%;
     height: auto;
+}
+
+/* Button box styling */
+.button__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    column-gap: 1.8rem;
+    
+    width: 100%; /* Full width for alignment */
+}
+
+
+.buttons__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.8rem;
 }
 
 .slide__col {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 446px;
-    width: 100%;
+    width: 100%; /* Adjusted width */
     height: auto;
     row-gap: 2.4rem;
 }
 
-.slide__col img {
-    max-width: 446px;
-    width: 100%;
-    height: auto;
-}
-
-/*slide buttons*/
-.button__box {
-    display: flex;
-    /* justify-content: center; */
-    /* justify-content: space-between; */
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 1.8rem;
-
-}
-
-
-.slide__col .slide-button {
-    /* position: absolute; */
-    top: 50%;
+/* Button styles */
+.slide-button {
     outline: none;
     border: none;
     height: 40px;
     width: 40px;
-    z-index: 5;
-    /* color: #fff; */
-    color: #000;
-    display: flex;
-    cursor: pointer;
-    font-size: 2.2rem;
-    /* background: #000; */
     background: #ddd;
+    color: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10%;
-    /* transform: translateY(-50%); */
+    margin: 0 10px;
 }
 
-.slide__col .slide-button:hover {
-    background: #eee; 
-    /* color: #404040;*/
+.slide-button:hover {
+    background: #eee;
 }
-
-.slide__col .slide-button#prev-slide {
-/* left: -25px; */
-/* display: none; */
-}
-
-.slide__col.slide-button#next-slide {
-/* right: -25px; */
-/* display: none; */
-}
-
 
 @media (max-width: 1300px) {
-
-
     .button__box {
         justify-content: center;
     }
 
-   .summary__text {
-    flex-direction: column;
-    
-   }
+    .summary__text {
+        flex-direction: column;
+    }
 
-   .slide__img {
-    /* flex-direction: column; */
-    flex-grow: 1;
-    flex-wrap: wrap;
-    column-gap: 6.4rem;
-    justify-content: center;
-   }
+    .slide__img {
+        flex-grow: 1;
+        flex-wrap: wrap;
+        column-gap: 6.4rem;
+        justify-content: center;
+    }
 
-   .slide__col {
-    justify-content: center;
-    width: 100%;
-   }
-
-   .slide__col p {
-    display: none;
-   }
+    .slide__col p {
+        display: none;
+    }
 }
+
+
+.slide__img {
+    display: flex;
+    flex-direction: column; /* Stacking components vertically */
+    align-items: center;
+    row-gap: 4.8rem;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width */
+}
+
+.images-container img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+}
+
+/* Summary section */
+
+/* Description paragraph styling to match third image width */
+.slide-description {
+    width: 100%; /* Initial width */
+    max-width: 340px; /* Match the width of the images, adjust as per actual image width */
+    /* text-align: end; */
+    margin-top: 2rem; /* Space above the paragraph */
+}
+
+/* Any base styles for all images */
+.images-container img {
+    transition: max-width 0.3s ease;
+}
+
+
+/* Media queries and other responsive adjustments */
+
+@media (max-width: 1300px) {
+    .images-container {
+        flex-direction: row; /* Set the images container to row layout */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-between; /* Space images evenly */
+    }
+
+    .images-container img {
+        max-width: none; /* Remove max-width restriction */
+        width: 49%; /* Set width for the first two images */
+    }
+
+    .images-container img:nth-child(3) {
+        width: 100%; /* Third image takes full width */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .button__box p, .slide-description {
+        display: none; /* Hide paragraph in the button box */
+    }
+
+    .button__box {
+        flex-direction: row; /* Adjust button box layout to row for alignment */
+        justify-content: space-between; /* Distribute space between elements */
+        align-items: center; /* Center-align the items vertically */
+        width: 100%; /* Full width to align correctly */
+    }
+
+    .buttons__box {
+        justify-content: center; /* Ensure buttons are spaced out */
+        width: 100%; /* Set buttons container to take full width */
+    }
+}
+
+@media (min-width: 1300px) {
+    .section__bullet {
+        margin-top: -15%;
+    }
+
+    .button__box {
+        transform: translateY(-120%);
+        justify-content: flex-end; /* Ensure buttons are spaced out */
+        width: 100%; /* Set buttons container to take full width */
+    }
+
+    .images-container img:last-child {
+        height: 50%; /* Sets the third image height to be half of its original */
+    }
+
+    .slide-description {
+        max-width: 340px; /* Match the width of the images, adjust as per actual image width */
+        /* text-align: end; */
+        margin-top: 2rem; /* Space above the paragraph */
+    }
+}
+
+
+/* Flex container setup for image slideshow */
+.images-container {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping of items */
+    justify-content: space-between; /* Space out items evenly */
+    width: 100%; /* Full container width */
+}
+
+.images-container img {
+    flex: 1 1 100%; /* Default to full width to ensure responsive behavior */
+    max-width: 340px; /* Limit maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease; /* Smooth transitions for resizing */
+    
+}
+
+/* Styles that apply when the viewport width is less than 1300px */
+@media (max-width: 1300px) {
+
+    .images-container {
+        row-gap: 2.4rem;
+        /* column-gap: 2.4rem; */
+    }
+
+    .images-container img {
+        /* transform: scale(0.8); */
+        flex-basis: 50%; /* Allow each image to potentially take full width */
+        max-width: none; /* Remove max-width to allow full flexibility */
+    }
+
+    .images-container img:nth-child(3n+1),
+    .images-container img:nth-child(3n+2) {
+
+        flex-basis: 50%; /* Each image takes about half the container's width */
+        max-width: 48%; /* Ensure flexibility in sizing */
+    }
+
+    .images-container img:nth-child(3n+3) {
+        flex-basis: 100%; /* Full width of the container */
+        max-width: 100%; /* Ensure it expands fully */
+        margin-right: 0; /* Reset any right margin for alignment */
+    }
+}
+
