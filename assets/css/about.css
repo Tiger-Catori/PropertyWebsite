@@ -66,6 +66,10 @@ body {
     /* Adjust the origin of transformation if needed */
 }
 
+/* #history__head {
+    text-align: left;
+} */
+
 /* SECTION MISSION */
 .mission__container {
     display: flex;
