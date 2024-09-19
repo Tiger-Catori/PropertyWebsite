@@ -9,8 +9,9 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
     position: relative; /* Establish a positioning context */
-    height: 70dvh; /* Set the height of the hero section to 70% of the viewport height */
-    
+    height: 50dvh; /* Set the height of the hero section to 70% of the viewport height */
+    /* width: 100dvw; */
+    left: 0;
 }
 
 .form2__container {

@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentSet = currentSetIndex + 1;
         counter.innerText = `${currentSet}/${totalSets}`;
     }
+    
+    
+    
+    
+    
 
     function updateSlides() {
         slides.forEach((slide, index) => {
